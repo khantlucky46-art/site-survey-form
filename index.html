@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>સાઇટ સર્વે ફોર્મ</title>
+
+<style>
+body{
+    font-family: system-ui, sans-serif;
+    background:#f3f0ff;
+    padding:20px;
+    margin:0;
+}
+.container{
+    max-width:720px;
+    margin:auto;
+    background:#fff;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* ===== Header ===== */
+.header{
+    text-align:center;
+    padding-bottom:15px;
+    border-bottom:2px solid #eee;
+}
+.header img{
+    max-width:160px;
+    background:transparent;
+}
+.header h2{
+    margin:8px 0 4px;
+    color:#5a2ca0;
+}
+.header p{
+    margin:0;
+    font-weight:600;
+}
+
+/* ===== Form ===== */
+h1{
+    text-align:center;
+    margin:20px 0;
+    color:#333;
+}
+label{
+    display:block;
+    margin-top:14px;
+    font-weight:600;
+}
+input, textarea{
+    width:100%;
+    padding:10px;
+    margin-top:5px;
+    border-radius:6px;
+    border:1px solid #ccc;
+    font-size:15px;
+}
+textarea{
+    resize:vertical;
+}
+button{
+    margin-top:22px;
+    width:100%;
+    padding:14px;
+    background:#5a2ca0;
+    color:#fff;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+    cursor:pointer;
+}
+button:hover{
+    background:#4a2385;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- ===== Company Header with Logo ===== -->
+<div class="header">
+    <img src="https://uploads.onecompiler.io/44ebwk3j3/44ebv5gdf/1000472086.png"
+         alt="ARA Associates Logo">
+    <h2>Ravi Baraiya</h2>
+    <p>📞 +91 8469235200</p>
+</div>
+
+<h1>સાઇટ સર્વે ફોર્મ</h1>
+
+<form onsubmit="sendData(); return false;">
+
+<label>ગ્રાહકનું પૂરું નામ</label>
+<input id="name" required>
+
+<label>મોબાઇલ નંબર</label>
+<input id="mobile" required>
+
+<label>ઈ-મેલ</label>
+<input id="email">
+
+<label>વોટ્સએપ નંબર</label>
+<input id="whatsapp">
+
+<label>ગામ અને તાલુકો</label>
+<input id="village" required>
+
+<label>શહેર</label>
+<input id="city" required>
+
+<label>સર્વે નં / બ્લોક નંબર</label>
+<input id="survey" required>
+
+<label>કુલ વિસ્તાર</label>
+<input id="area">
+
+<label>જમીન માપણી વિગત</label>
+<textarea id="measurement" rows="3"></textarea>
+
+<label>આવશ્યકતા</label>
+<textarea id="requirement" rows="3"></textarea>
+
+<label>દસ્તાવેજો</label>
+<textarea id="documents" rows="3"></textarea>
+
+<button type="submit">Submit કરો</button>
+</form>
+
+</div>
+
+<script>
+function sendData(){
+let msg =
+"🏢 *Ravi Baraiya* \n" +
+"📞 +91 8469235200 \n\n" +
+"📝 *સાઇટ સર્વે ફોર્મ* \n\n" +
+"👤 નામ: " + name.value + "\n" +
+"📞 મોબાઇલ: " + mobile.value + "\n" +
+"📧 Email: " + email.value + "\n" +
+"💬 WhatsApp: " + whatsapp.value + "\n" +
+"📍 ગામ/તાલુકો: " + village.value + "\n" +
+"🏙️ શહેર: " + city.value + "\n" +
+"📄 સર્વે નં: " + survey.value + "\n" +
+"📐 વિસ્તાર: " + area.value + "\n" +
+"📏 માપણી: " + measurement.value + "\n" +
+"📌 આવશ્યકતા: " + requirement.value + "\n" +
+"📎 દસ્તાવેજો: " + documents.value;
+
+let whatsappURL =
+"https://wa.me/918469235200?text=" + encodeURIComponent(msg);
+
+let emailURL =
+"mailto:Dr.rajeshkhant@gmail.com?subject=Site Survey Form&body=" +
+encodeURIComponent(msg);
+
+window.open(whatsappURL, "_blank");
+window.location.href = emailURL;
+}
+</script>
+
+</body>
+</html>
